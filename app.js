@@ -13,6 +13,10 @@ chart.panBehavior = "rotateLongLat";
 chart.deltaLatitude = -10;
 chart.padding(20,20,20,20);
 
+// Disable zoom
+chart.mouseWheelBehavior = "none";
+chart.dragAndZoom = false;
+
 // Create map polygon series
 var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
 
@@ -25,7 +29,7 @@ var polygonTemplate = polygonSeries.mapPolygons.template;
 polygonTemplate.tooltipText = "{name}";
 polygonTemplate.fill = am4core.color("#FF6633");
 polygonTemplate.stroke = am4core.color("#000033");
-polygonTemplate.strokeWidth = 0.75;
+polygonTemplate.strokeWidth = 0.5;
 polygonTemplate.cursorOverStyle = am4core.MouseCursorStyle.pointer;
 
 polygonTemplate.urlTarget = "_blank";
